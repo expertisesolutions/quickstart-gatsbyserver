@@ -1,8 +1,11 @@
-const siteMetadata = require('./config/metadata');
 const path = require('path');
 
 module.exports = {
-  siteMetadata,
+  siteMetadata: {
+    title: `Gatsby`,
+    description: `Blazing fast modern site generator for React`,
+    siteUrl: "http://localhost:8000",
+  },
   plugins: [
 
     'gatsby-plugin-react-helmet',
