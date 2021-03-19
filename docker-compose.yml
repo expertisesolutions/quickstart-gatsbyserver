@@ -1,0 +1,13 @@
+version: "3.8"
+services:
+  web:
+    build:
+      context: .
+    ports:
+      - "8000:8000"
+    volumes:
+      - /web_dados/node_modules
+      - .:/web_dados
+    environment:
+      - NODE_ENV=development
+      - GATSBY_WEBPACK_PUBLICPATH=/
