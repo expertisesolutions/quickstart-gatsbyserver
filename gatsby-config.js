@@ -2,9 +2,9 @@ const path = require('path');
 
 module.exports = {
   siteMetadata: {
-    title: `Gatsby`,
-    description: `Blazing fast modern site generator for React`,
-    siteUrl: "http://localhost:8000",
+    title: 'quickstart-gatsbyserver',
+    description: 'Expertise Solutions quickstart/guide on Gatsby Apps',
+    siteUrl: 'http://localhost:8000',
   },
   plugins: [
 
