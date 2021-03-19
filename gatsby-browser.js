@@ -7,7 +7,7 @@ export { wrapRootElement } from './getsby/wrapRootElement';
 
 https://www.gatsbyjs.com/docs/reference/config-files/gatsby-ssr#reach-skip-nav
 onRenderBody {function}
-Ex global: 
+Ex global:
 
 export const onRenderBody = ( {
     setPostBodyComponents,
@@ -17,7 +17,7 @@ export const onRenderBody = ( {
     ])
 }
 
-or 
+or
 
 export const onRenderBody = ( {
     setPostBodyComponents,
@@ -28,4 +28,3 @@ export const onRenderBody = ( {
 }
 
 */
-

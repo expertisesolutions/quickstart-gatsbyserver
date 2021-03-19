@@ -1,9 +1,8 @@
-import React from "react"
-import { Router } from "@reach/router"
-import Login from "../layouts/login"
-import Home from "../layouts/home"
-import Register from "../layouts/register"
-
+import React from 'react';
+import { Router } from '@reach/router';
+import Login from '../layouts/login';
+import Home from '../layouts/home';
+import Register from '../layouts/register';
 
 const App = () => {
   return (
@@ -14,6 +13,6 @@ const App = () => {
         <Login path="/" />
       </Router>
     </>
-  )
-}
-export default App
+  );
+};
+export default App;

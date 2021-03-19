@@ -33,7 +33,7 @@ _Server Model [When possible to put the server link here](https://github.com/exp
 1.  **Starting to developing.**
 
     Navigate to your new website directory and install the /node_modues dependencies.
-    
+
     ```shell
     >yarn start
     ```
@@ -41,7 +41,7 @@ _Server Model [When possible to put the server link here](https://github.com/exp
     ```shell
     >gatsby develop
     ```
-    
+
 1.  **Open the source code and start editing!**
 
     Your site is now running at `http://localhost:8000`!
@@ -56,7 +56,7 @@ A quick look at the top-level files and directories you'll see in a Gatsby proje
 
     .
     ├── node_modules
-    ├── config 
+    ├── config
     ├── src
     ├── .gitignore
     ├── .prettierrc
@@ -107,7 +107,7 @@ A quick look at the top-level files and directories you'll see in a Gatsby proje
 1. **`gatsby-plugin-styled-components`**:A Gatsby plugin for styled-components with built-in server-side rendering support.
 1. **`gatsby-plugin-page-creator`**:Gatsby plugin that automatically creates pages from React components in specified directories. Gatsby includes this plugin automatically in all sites for creating pages from components in src/pages. You can also leverage the File System Route API to programmatically create pages from your data.(You may include another instance of this plugin if you’d like to create additional “pages” directories or want to override the default usage.)
 1. **`gatsby-plugin-offline`**:Adds drop-in support for making a Gatsby site work offline and more resistant to bad network connections. It uses Workbox Build to create a service worker for the site and loads the service worker into the client. ( If you’re using this plugin with gatsby-plugin-manifest (recommended) this plugin should be listed after that plugin so the manifest file can be included in the service worker.)
-- Optional 
+- Optional
     - **` gatsby-plugin-canonical-urls`**:if necessary the creation of canonical urls, an important tool for seo
 
 ## 🎓 Learning Gatsby
@@ -116,3 +116,11 @@ A quick look at the top-level files and directories you'll see in a Gatsby proje
 - **consult  [documentation](https://www.gatsbyjs.com/docs/).** check out the _Guides_, _API Reference_, and _Advanced Tutorials_ sections in the sidebar.
 
 <!-- AUTO-GENERATED-CONTENT:END -->
+
+## ESLint
+To run `eslint` and fix problems run:
+```bash
+qickstarter-gatsbyserver $ npx eslint --fix .
+```
+It should resolve almost every problem, but some may be only spotted which will
+be diagnosed.
