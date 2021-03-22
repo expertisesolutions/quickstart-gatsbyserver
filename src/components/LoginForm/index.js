@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Limiter, Container, FormLogin } from './styles';
+import { Limiter, Container, FormLogin, InputLogin } from './styles';
 
 export default function RegisterForm() {
   return (
@@ -9,42 +9,42 @@ export default function RegisterForm() {
                 <div className="boxLogin">
                     <FormLogin>
                         <span className="titlelogin">
-                            Account Login
+                            Login
                         </span>
 
-                        <span>
-                            Username
+                        <span className="captionlogin">
+                            Nome de usuário
                         </span>
-                        <div>
-                            <input/>
-                            <span></span>
-                        </div>
+                        <InputLogin data-validate = "Nome requerida">
+                            <input type="text" name="username"/>
+                            <span className="focuslogin"></span>
+                        </InputLogin>
 
-                        <span>
-                            Password
+                        <span className="captionlogin">
+                            Senha
                         </span>
-                        <div>
+                        <InputLogin data-validate = "Senha requerida">
                             <span>
                                 <i></i>
                             </span>
-                            <input/>
-                            <span></span>
-                        </div>
-                        <div>
+                            <input type="password" name="pass"/>
+                            <span className="focuslogin"></span>
+                        </InputLogin>
+                        <div className="flexLogin">
                             <div>
-                                <input/>
-                                <label>
-                                    Remember me
+                                <input className="checkboxlogin" type="checkbox" id="remember" name="remember-me"/>
+                                <label htmlFor="remember">
+                                    Lembrar
                                 </label>
                             </div>
                             <div>
                                 <a>
-                                    Forgot Password?
+                                    Esqueceu a senha?
                                 </a>
                             </div>
                         </div>
 
-                        <div>
+                        <div className="conteinerbuttonlogin">
                             <button>
                                 Login
                             </button>

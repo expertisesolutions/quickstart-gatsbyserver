@@ -3,6 +3,7 @@ import styled from 'styled-components';
 export const Limiter = styled.div`
         width: 100%;
         margin: 0 auto;
+        background-color: ${props => props.theme.primary};
     `;
 
 export const Container = styled.div`
@@ -17,21 +18,42 @@ export const Container = styled.div`
     justify-content: center;
     align-items: center;
     padding: 15px;
-    
-    background-color: ${props => props.theme.primary};
-    
 
     .boxLogin { 
         width: 560px;
         background: ${props => props.theme.background};
         border-radius: 10px;
         position: relative;
+
+        padding-left: 85px;
+        padding-right: 85px;
+        padding-top: 55px;
+        padding-bottom: 55px
     }
 
 `;
 
-export const FormLogin = styled.div`
+export const FormLogin = styled.form`
+
     width: 100%;
+
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    justify-content: space-between;
+
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    -moz-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    -o-flex-wrap: wrap;
+    flex-wrap: wrap;
 
     .titlelogin {
         font-size: ${props => props.theme.fontTitle};
@@ -42,5 +64,137 @@ export const FormLogin = styled.div`
 
         width: 100%;
         display: block;
+        padding-bottom: 32px;
+    };
+
+    .captionlogin {
+        font-size: ${props => props.theme.fontSmall};
+        color: ${props => props.theme.fontEmphasis};
+        line-height: 1.4;
+        padding-bottom: 11px;
+    };
+
+    .checkboxlogin {
+        //display: none;
+    };
+
+    .conteinerbuttonlogin {
+        width: 100%;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: flex;
+        flex-wrap: wrap;
+    };
+
+    .flexLogin {
+        width: 100%;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: flex;
+        justify-content: space-between;
+        -ms-align-items: center;
+        padding-bottom: 48px;
     }
+
+    label {
+        font-size: ${props => props.theme.fontSmall};
+        color:  ${props => props.theme.fontSecondary};
+        line-height: 1.4;
+
+        display: block;
+        position: relative;
+        padding-left: 26px;
+        cursor: pointer;
+    };
+
+    a {
+        font-size: ${props => props.theme.fontSmall};
+        color: ${props => props.theme.fontSecondary};
+        line-height: 1.4;
+    }
+
+    button {
+        font-size: ${props => props.theme.fontMedium};
+        color: ${props => props.theme.fontContrast};
+        line-height: 1.2;
+
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0 20px;
+        min-width: 150px;
+        height: 55px;
+        background-color: ${props => props.theme.secondary};
+        border-radius: 27px;
+
+        -webkit-transition: all 0.4s;
+        -o-transition: all 0.4s;
+        -moz-transition: all 0.4s;
+        transition: all 0.4s;
+
+        :hover {
+            border: 0px;
+            background-color: ${props => props.theme.focus};
+        };
+    };
+`;
+
+export const InputLogin = styled.div`
+    width: 100%;
+    position: relative;
+    background-color: ${props => props.theme.background};
+    border: 1px solid ${props => props.theme.borderPrimay};
+    border-radius: 2px;
+
+    position: relative;
+    margin-bottom: 12px;
+
+
+    input {
+        color:  solid ${props => props.theme.fontEmphasis};
+        line-height: 1.2;
+        font-size: solid ${props => props.theme.fontBig};
+
+        display: block;
+        width: 100%;
+        background: transparent;
+        height: 55px;
+        border: 0px;
+        padding: 0 25px 0 25px;
+    };
+
+    .focuslogin {
+        position: absolute;
+        display: block;
+        width: calc(100% + 2px);
+        height: calc(100% + 2px);
+        top: -1px;
+        left: -1px;
+        pointer-events: none;
+        border: 1px solid ${props => props.theme.focus};
+        border-radius: 4px;
+
+        visibility: hidden;
+        opacity: 0;
+
+        -webkit-transition: all 0.4s;
+        -o-transition: all 0.4s;
+        -moz-transition: all 0.4s;
+        transition: all 0.4s;
+
+        -webkit-transform: scaleX(1.1) scaleY(1.3);
+        -moz-transform: scaleX(1.1) scaleY(1.3);
+        -ms-transform: scaleX(1.1) scaleY(1.3);
+        -o-transform: scaleX(1.1) scaleY(1.3);
+        transform: scaleX(1.1) scaleY(1.3);
+    };
+
 `;
