@@ -1,24 +1,26 @@
 export default {
   // colors
+  primary: '#ebebeb',
   background: '#fff',
-  primary: '##ebebeb',
-  secondary: '#fff',
+  secondary: '#333333',
   tertiary: '#fff',
   contrast: '#fff',
+  focus: '#199',
 
   fontEmphasis: '#555555',
   fontPrimary: '#000',
-  fontSecondary: '#000',
+  fontSecondary: '#999999',
+  fontContrast: '#fff',
 
-  borderPrimay: '#555555',
+  borderPrimay: '#e6e6e6',
   borderSecondary: '#000',
 
   // Fonte
-  fontSmall: '10px',
+  fontSmall: '13px',
   fontMedium: '16px',
   fontBig: '20px',
   fontTitle: '30px',
-  fontSubtitle: '20px',
+  fontCaption: '20px',
   fontFeatured: 'bold',
 
 };
