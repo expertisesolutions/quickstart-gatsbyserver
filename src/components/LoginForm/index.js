@@ -3,7 +3,7 @@ import React from 'react';
 import { Limiter, Container, FormLogin } from './styles';
 
 export default function RegisterForm() {
-    return(
+  return (
         <Limiter>
             <Container>
                 <div className="boxLogin">
@@ -19,7 +19,7 @@ export default function RegisterForm() {
                             <input/>
                             <span></span>
                         </div>
-                        
+
                         <span>
                             Password
                         </span>
@@ -53,6 +53,5 @@ export default function RegisterForm() {
                 </div>
             </Container>
         </Limiter>
-    );
+  );
 }
-
