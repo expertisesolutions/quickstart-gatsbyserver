@@ -1,11 +1,13 @@
 import React from 'react';
 
 import { Container } from './styles';
+import Private from '../../auth/privateComponent'
+import Teste from '../../components/teste'
 
 export default function Page01() {
   return (
         <Container>
-            <h1>Exemple page01</h1>
+            <Private component={Teste}/>
         </Container>
   );
 }
