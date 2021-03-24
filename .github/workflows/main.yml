@@ -1,0 +1,32 @@
+name: CI
+
+on:
+  push:
+    branches: [ coquinho/add-ci ]
+  pull_request:
+    branches: [ master ]
+
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: Run docker containers
+        # Use --build --force-recreate --remove-orphans to avoid strange cache
+        run: docker-compose up --build --force-recreate --remove-orphans
+      - name: Run a multi-line script
+        run: |
+          echo Add other actions to build,
+          echo test, and deploy your project.
+  ESLint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: ls
+        run: ls
+      - name: Install Packages
+        run: npm install
+      - name: Run ESLint
+        run: npx eslint .
