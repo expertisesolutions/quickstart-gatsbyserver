@@ -34,7 +34,7 @@ export default function RegisterForm() {
                             <div>
                                 <input className="checkboxlogin" type="checkbox" id="remember" name="remember-me"/>
                                 <label htmlFor="remember">
-                                    Lembrar
+                                    Manter-me conectado
                                 </label>
                             </div>
                             <div>
