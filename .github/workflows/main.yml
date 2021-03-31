@@ -30,4 +30,4 @@ jobs:
       - name: Install Packages
         run: npm install
       - name: Run ESLint
-        run: npx eslint .
+        run: npx eslint
