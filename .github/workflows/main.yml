@@ -15,8 +15,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Run docker containers
-        # Use --build --force-recreate --remove-orphans to avoid strange cache
-        run: docker-compose up --build --force-recreate --remove-orphans
+        run: docker-compose -f docker-compose.prod.yml up
       - name: Run a multi-line script
         run: |
           echo Add other actions to build,
@@ -29,4 +28,4 @@ jobs:
       - name: Install Packages
         run: npm install
       - name: Run ESLint
-        run: npx eslint .
+        run: npx eslint
