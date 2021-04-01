@@ -7,10 +7,16 @@ module.exports = {
     siteUrl: 'http://localhost:8000',
   },
   plugins: [
-
     'gatsby-plugin-react-helmet',
+    {
+      resolve: 'gatsby-plugin-root-import',
+      options: {
+        components: path.join(__dirname, 'src/components'),
+        pages: path.join(__dirname, 'src/pages'),
+        src: path.join(__dirname, 'src'),
+      }
+    },
     'gatsby-plugin-sitemap',
-
     {
       resolve: 'gatsby-plugin-nprogress',
       options: {

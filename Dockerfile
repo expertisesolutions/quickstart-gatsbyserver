@@ -5,6 +5,6 @@ WORKDIR /web_dados
 
 COPY . .
 
-RUN npm install
+RUN npm install --dev
 
 CMD ["npm", "run", "develop"]

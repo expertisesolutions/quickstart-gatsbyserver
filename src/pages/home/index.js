@@ -1,8 +1,7 @@
 import React from 'react';
 
 import { Container } from './styles';
-import Private from '../../auth/privateComponent'
-import Teste from '../../components/teste'
+import Private from '../../auth/privateComponent';
 
 export default function Page01() {
   return (
