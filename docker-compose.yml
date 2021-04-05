@@ -6,8 +6,14 @@ services:
     ports:
       - "8000:8000"
     volumes:
-      - /web_dados/node_modules
-      - .:/web_dados
+      # Create an isolated volume for the container, mounted as /web_dados
+      # inside it
+      - /web_dados
+      # Bind our local `src` directory to the container's `src`. This enables
+      # dynamic reloading when changing local sources, since as it is a
+      # binding, it'll be the same directory, so local changes will be
+      # reflected in the container.
+      - ./src:/web_dados/src/:ro
     environment:
       - NODE_ENV=development
-      - GATSBY_WEBPACK_PUBLICPATH=/
+      - GATSBY_WEBPACK_PUBLICPATH=/web_dados

@@ -7,8 +7,8 @@ services:
     ports:
       - "8003:8003"
     volumes:
-      - /web_dados/node_modules
-      - .:/web_dados
+      - /web_dados
+      - ./src/:/web_dados/src/:ro
     environment:
-      - NODE_ENV=development
-      - GATSBY_WEBPACK_PUBLICPATH=/
+      - NODE_ENV=production
+      - GATSBY_WEBPACK_PUBLICPATH=/web_dados
