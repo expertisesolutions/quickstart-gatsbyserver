@@ -1,0 +1,31 @@
+name: CI
+
+on:
+  push:
+    branches: [ coquinho/add-ci ]
+  pull_request:
+    branches: [ master ]
+
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: Run docker containers
+        run: docker-compose -f docker-compose.prod.yml up
+      - name: Run a multi-line script
+        run: |
+          echo Add other actions to build,
+          echo test, and deploy your project.
+  ESLint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: ls
+        run: ls
+      - name: Install Packages
+        run: npm install
+      - name: Run ESLint
+        run: npx eslint
