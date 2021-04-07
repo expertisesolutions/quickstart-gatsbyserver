@@ -1,7 +1,12 @@
 import React from 'react';
 
-import { Limiter, Container, FormLogin, InputLogin } from './styles';
+//styles
+import { 
+    Limiter, Container, FormLogin, InputLogin, InputButton
+ } from './styles';
 
+ import {FaFacebookSquare} from 'react-icons/fa'
+ 
 export default function RegisterForm() {
   return (
         <Limiter>
@@ -11,7 +16,12 @@ export default function RegisterForm() {
                         <span className="titlelogin">
                             Login
                         </span>
-
+                        <InputButton>
+                            <a className="buttonFacebook" href="#">
+                                <FaFacebookSquare className="iconlogin"/>
+                                Entrar com Facebook
+                            </a>
+                        </InputButton>
                         <span className="captionlogin">
                             Nome de usuário
                         </span>
@@ -31,14 +41,14 @@ export default function RegisterForm() {
                             <span className="focuslogin"></span>
                         </InputLogin>
                         <div className="flexLogin">
-                            <div>
+                            <div className="remember">
                                 <input className="checkboxlogin" type="checkbox" id="remember" name="remember-me"/>
                                 <label htmlFor="remember">
                                     Manter-me conectado
                                 </label>
                             </div>
                             <div>
-                                <a>
+                                <a href="#">
                                     Esqueceu a senha?
                                 </a>
                             </div>
@@ -49,9 +59,17 @@ export default function RegisterForm() {
                                 Login
                             </button>
                         </div>
+                        <InputLogin/>
+                        <div className="flexLogin">
+                            <a href="#">
+                               Ainda não é cadastrado ?  <strong>Cadastrar-se</strong>
+                            </a>
+                        </div>
                     </FormLogin>
                 </div>
             </Container>
         </Limiter>
   );
 }
+
+

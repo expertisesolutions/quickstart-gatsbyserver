@@ -28,7 +28,7 @@ export const Container = styled.div`
         padding-left: 85px;
         padding-right: 85px;
         padding-top: 55px;
-        padding-bottom: 55px
+        padding-bottom: 20px
     }
 
 `;
@@ -86,6 +86,7 @@ export const FormLogin = styled.form`
         display: -ms-flexbox;
         display: flex;
         flex-wrap: wrap;
+        margin-bottom: 20px;
     };
 
     .flexLogin {
@@ -98,6 +99,16 @@ export const FormLogin = styled.form`
         justify-content: space-between;
         -ms-align-items: center;
         padding-bottom: 48px;
+    }
+
+    .remember {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
     label {
@@ -115,6 +126,17 @@ export const FormLogin = styled.form`
         font-size: ${props => props.theme.fontSmall};
         color: ${props => props.theme.fontSecondary};
         line-height: 1.4;
+        text-decoration:none; 
+
+        -webkit-transition: all 0.2s;
+        -o-transition: all 0.2s;
+        -moz-transition: all 0.2s;
+        transition: all 0.2s;
+
+        :hover {
+           text-decoration:underline;
+           font-size: ${props => props.theme.fontMedium};
+        };
     }
 
     button {
@@ -131,9 +153,9 @@ export const FormLogin = styled.form`
         align-items: center;
         padding: 0 20px;
         min-width: 150px;
-        height: 55px;
+        height: 40px;
         background-color: ${props => props.theme.secondary};
-        border-radius: 27px;
+        border-radius: 10px;
 
         -webkit-transition: all 0.4s;
         -o-transition: all 0.4s;
@@ -147,6 +169,66 @@ export const FormLogin = styled.form`
     };
 `;
 
+export const InputButton = styled.div`
+    width: 100%;
+    position: relative;
+    background-color: ${props => props.theme.background};
+    margin-bottom: 12px;
+
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-direction: row;
+
+    .buttonFacebook {
+        font-size: ${props => props.theme.fontBig};
+        color: ${props => props.theme.fontContrast};
+        text-decoration:none; 
+        line-height: 1.2;
+
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 15px;
+        width: 100%;
+        height: 40px;
+        border-radius: 10px;
+        -webkit-transition: all 0.4s;
+        -o-transition: all 0.4s;
+        -moz-transition: all 0.4s;
+        transition: all 0.4s;
+        position: relative;
+        z-index: 1;
+
+        :hover {
+            background-color: #3b5998;
+        }
+
+        color: ${props => props.theme.fontContrast};
+        background-color: ${props => props.theme.secondary};
+
+    }
+
+    .iconlogin {
+        color: ${props => props.theme.fontContrast};
+        height: 27px;
+        width: 27px;
+        margin-right: 15px;
+    }
+
+    i {
+            font-size: 30px;
+            margin-right: 17px;
+            padding-bottom: 3px;
+    }
+`
+
 export const InputLogin = styled.div`
     width: 100%;
     position: relative;
@@ -154,7 +236,6 @@ export const InputLogin = styled.div`
     border: 1px solid ${props => props.theme.borderPrimay};
     border-radius: 2px;
 
-    position: relative;
     margin-bottom: 12px;
 
 
@@ -190,11 +271,6 @@ export const InputLogin = styled.div`
         -moz-transition: all 0.4s;
         transition: all 0.4s;
 
-        -webkit-transform: scaleX(1.1) scaleY(1.3);
-        -moz-transform: scaleX(1.1) scaleY(1.3);
-        -ms-transform: scaleX(1.1) scaleY(1.3);
-        -o-transform: scaleX(1.1) scaleY(1.3);
-        transform: scaleX(1.1) scaleY(1.3);
-    };
+    }; 
 
 `;
