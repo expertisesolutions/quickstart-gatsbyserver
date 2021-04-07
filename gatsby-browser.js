@@ -1,4 +1,4 @@
-export { wrapRootElement } from './getsby/wrapRootElement';
+export { wrapRootElement } from './gatsby/wrapRootElement';
 
 /*
 * for scripts:
