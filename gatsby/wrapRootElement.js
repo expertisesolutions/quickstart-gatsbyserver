@@ -9,9 +9,4 @@ export const wrapRootElement = ({ element }) => (
     <BaseCSS/>
     {element}
   </ThemeProvider>
-  );
-
-
-
-
-
+);
