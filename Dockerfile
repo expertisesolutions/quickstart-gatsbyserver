@@ -1,10 +1,10 @@
 FROM node:alpine
 EXPOSE 8000
 
+RUN npm install -g gatsby-cli
+
+USER 1000
+
 WORKDIR /web_dados
 
-COPY . .
-
-RUN npm install
-
-CMD ["npm", "run", "develop"]
+CMD ["tail", "-F", "package.json"]
