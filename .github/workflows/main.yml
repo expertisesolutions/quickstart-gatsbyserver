@@ -2,7 +2,7 @@ name: CI
 
 on:
   push:
-    branches: [ coquinho/add-ci ]
+    branches: [ ricardo/githubpages ]
   pull_request:
     branches: [ master ]
 
@@ -14,12 +14,17 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
-      - name: Run docker containers
-        run: docker-compose -f docker-compose.prod.yml up
-      - name: Run a multi-line script
-        run: |
-          echo Add other actions to build,
-          echo test, and deploy your project.
+      - name: Run install
+        run: npm install
+
+      - name: Deploy 🚀
+        uses: enriikke/gatsby-gh-pages-action@v2
+        with:
+          access-token: x-access-token:${{ secrets.GITHUB_TOKEN }}
+          deploy-branch: gh-pages
+          gatsby-args: --prefix-paths
+
+
   ESLint:
     runs-on: ubuntu-latest
     steps:
