@@ -181,8 +181,6 @@ export const FormLogin = styled.form`
 
 `;
 
-
-
 export const InputLogin = styled.div`
     width: 100%;
     position: relative;

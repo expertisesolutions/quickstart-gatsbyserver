@@ -133,6 +133,8 @@ export const FormLogin = styled.form`
         -moz-transition: all 0.2s;
         transition: all 0.2s;
 
+        cursor: pointer;
+        
         :hover {
            text-decoration:underline;
            font-size: ${props => props.theme.fontMedium};
@@ -161,6 +163,7 @@ export const FormLogin = styled.form`
         -o-transition: all 0.4s;
         -moz-transition: all 0.4s;
         transition: all 0.4s;
+        cursor: pointer;
 
         :hover {
             border: 0px;
@@ -227,7 +230,7 @@ export const InputButton = styled.div`
             margin-right: 17px;
             padding-bottom: 3px;
     }
-`
+`;
 
 export const InputLogin = styled.div`
     width: 100%;
