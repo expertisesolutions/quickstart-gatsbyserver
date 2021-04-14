@@ -1,7 +1,7 @@
 const path = require('path');
 
 module.exports = {
-  pathPrefix: "/quickstart-gatsbyserver",
+  pathPrefix: '/quickstart-gatsbyserver',
   siteMetadata: {
     title: 'quickstart-gatsbyserver',
     description: 'Expertise Solutions quickstart/guide on Gatsby Apps',
