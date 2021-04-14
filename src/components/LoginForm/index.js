@@ -1,12 +1,13 @@
 import React from 'react';
+import { navigate } from 'gatsby';
 
-//styles
-import { 
-    Limiter, Container, FormLogin, InputLogin, InputButton
- } from './styles';
+// styles
+import {
+  Limiter, Container, FormLogin, InputLogin, InputButton
+} from './styles';
 
- import {FaFacebookSquare} from 'react-icons/fa'
- 
+import { FaFacebookSquare } from 'react-icons/fa';
+
 export default function RegisterForm() {
   return (
         <Limiter>
@@ -48,20 +49,40 @@ export default function RegisterForm() {
                                 </label>
                             </div>
                             <div>
-                                <a href="#">
+                                <a
+                                    onClick={event => {
+                                      event.preventDefault();
+                                      navigate(
+                                        '/forgotpass/',
+                                      );
+                                    }}
+                                >
                                     Esqueceu a senha?
                                 </a>
                             </div>
                         </div>
 
                         <div className="conteinerbuttonlogin">
-                            <button>
+                            <button
+                                onClick={event => {
+                                  event.preventDefault();
+                                  navigate(
+                                    '/login/',
+                                  );
+                                }}
+                            >
                                 Login
                             </button>
                         </div>
                         <InputLogin/>
                         <div className="flexLogin">
-                            <a href="#">
+                            <a onClick={event => {
+                              event.preventDefault();
+                              navigate(
+                                '/register/',
+                              );
+                            }}
+                            >
                                Ainda não é cadastrado ?  <strong>Cadastrar-se</strong>
                             </a>
                         </div>
@@ -71,5 +92,3 @@ export default function RegisterForm() {
         </Limiter>
   );
 }
-
-
